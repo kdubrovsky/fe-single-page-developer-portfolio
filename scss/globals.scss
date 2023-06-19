@@ -39,7 +39,8 @@ a,
     transition: 0.3s;
 }
 
-a:hover {
+a:hover,
+button:hover {
     color: colors.$accent;
 }
 
@@ -81,4 +82,11 @@ a:hover {
     letter-spacing: 0.143em;
     text-transform: uppercase;
     text-decoration: none;
+
+    &--button {
+        outline: none;
+        background-color: transparent;
+        color: colors.$white;
+        cursor: pointer;
+    }
 }
