@@ -45,9 +45,12 @@ button:hover {
 }
 
 .container {
-    width: 1190px;
+    max-width: 1920px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 11.46%;
+    @media (max-width: 1280px) {
+        padding: 0 3.91%;
+    }
 }
 
 .section-title {
