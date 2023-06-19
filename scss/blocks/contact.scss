@@ -1,0 +1,70 @@
+@use "../colors";
+
+.contact {
+    background-color: colors.$dark-gray;
+    padding-top: 84px;
+    padding-bottom: 92px;
+
+    background-repeat: no-repeat;
+    background-image: url("/images/rings.svg");
+    background-position: left -22.5% bottom 12.5%;
+
+    .section-title {
+        margin-bottom: 36px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__title-wrapper {
+        width: 40%;
+    }
+
+    &__description {
+        color: colors.$light-gray;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 40%;
+    }
+
+    input,
+    textarea {
+        padding-left: 24px;
+
+        outline: none;
+        font-size: 16px;
+        line-height: 1.625;
+        letter-spacing: -0.01375em;
+        text-transform: uppercase;
+
+        color: colors.$white;
+        padding-bottom: 16px;
+        background-color: transparent;
+        border-bottom: 1px solid colors.$white;
+
+        &::placeholder {
+            color: colors.$light-gray;
+        }
+
+        &:focus {
+            border-color: colors.$accent;
+            transition: 0.3s;
+        }
+    }
+
+    textarea {
+        resize: none;
+        height: 107px;
+    }
+
+    button {
+        align-self: flex-end;
+    }
+}
