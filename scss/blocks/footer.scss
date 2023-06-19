@@ -2,6 +2,8 @@
 
 .footer {
     width: 100%;
+    background-color: colors.$dark-gray;
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
