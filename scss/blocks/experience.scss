@@ -1,0 +1,29 @@
+@use "../colors";
+
+.experience {
+    padding-bottom: 140px;
+    background-repeat: no-repeat;
+    background-image: url("/images/rings.svg");
+    background-position: right -21.2% bottom 25.4%;
+
+    &__skills {
+        border-top: 1px solid white;
+        padding: 72px 5px 0 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 31%);
+        justify-content: space-between;
+        row-gap: 58px;
+    }
+
+    &__skill-title {
+        font-weight: 700px;
+        font-size: 48px;
+        line-height: 1.167;
+        letter-spacing: -0.0313em;
+        margin-bottom: 14px;
+    }
+
+    &__skill-description {
+        color: colors.$light-gray;
+    }
+}
