@@ -15,6 +15,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+a:link,
+a:visited {
+    color: inherit;
+}
+
 img,
 picture,
 video,
