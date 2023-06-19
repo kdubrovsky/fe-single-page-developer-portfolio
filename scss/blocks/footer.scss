@@ -1,0 +1,11 @@
+@use '../colors';
+
+.footer {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid white;
+        padding: 47px 0 92px;
+    }
+}

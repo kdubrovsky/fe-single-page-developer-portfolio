@@ -1,0 +1,13 @@
+@use "../colors";
+
+.header {
+    background: linear-gradient(to right, colors.$quite-black 60%, colors.$dark-gray 60%);
+    
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 30px 40px 0;
+    }
+}
