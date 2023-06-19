@@ -1,3 +1,5 @@
+@use 'colors';
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -14,5 +16,16 @@
 body {
     font-family: "Space Grotesk", sans-serif;
     font-size: 18px;
+    line-height: 1.556;
     font-weight: 500;
+    background-color: colors.$quite-black;
+    color: colors.$white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containter {
+    width: 1190px;
+    padding: 0 40px;
 }
