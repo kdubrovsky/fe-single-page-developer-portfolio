@@ -239,26 +239,27 @@
         </section>
         <section id="contact-form" class="contact">
             <div class="container">
-                <div class="contact__title-wrapper">
-                    <h2 class="section-title">
-                        Contact
-                    </h2>
-                    <p class="contact__description">
-                        I would love to hear about your project and how I could help. Please fill in the form, and I’ll
-                        get
-                        back to you as soon as possible.
-                    </p>
+                <div class="contact__wrapper">
+                    <div class="contact__title-wrapper">
+                        <h2 class="section-title">
+                            Contact
+                        </h2>
+                        <p class="contact__description">
+                            I would love to hear about your project and how I could help. Please fill in the form, and
+                            I’ll get back to you as soon as possible.
+                        </p>
+                    </div>
+                    <form class="contact__form">
+                        <label for="name" class="visually-hidden">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <label for="mail" class="visually-hidden">Email</label>
+                        <input type="email" name="mail" id="mail" placeholder="Email">
+                        <label for="message" class="visually-hidden">Message</label>
+                        <textarea name="message" id="message" cols="20" rows="3" placeholder="Message"
+                            autocomplete="off"></textarea>
+                        <button class="btn btn--button" type="submit">Send message</button>
+                    </form>
                 </div>
-                <form class="contact__form">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Name">
-                    <label for="mail">Email</label>
-                    <input type="email" name="mail" id="mail" placeholder="Email">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="20" rows="5" placeholder="Message">
-                    </textarea>
-                    <button class="btn btn--button" type="submit">Send mesage</button>
-                </form>
             </div>
         </section>
     </main>
