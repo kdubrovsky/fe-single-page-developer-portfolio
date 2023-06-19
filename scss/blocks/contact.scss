@@ -50,7 +50,8 @@
         border-bottom: 1px solid colors.$white;
 
         &::placeholder {
-            color: colors.$light-gray;
+            color: colors.$white;
+            opacity: 0.5;
         }
 
         &:focus {

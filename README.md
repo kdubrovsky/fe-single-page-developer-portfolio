@@ -2,7 +2,7 @@
 
 This is a solution to the [Single-page developer portfolio challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/singlepage-developer-portfolio-bBVj2ZPi-x).
 
-<!-- [Live Site URL]() -->
+[Live Site URL](https://fe-single-page-developer-portfolio.vercel.app)
 
 ### Built with
 
