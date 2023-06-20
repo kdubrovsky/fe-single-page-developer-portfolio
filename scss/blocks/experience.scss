@@ -6,8 +6,14 @@
     background-image: url("/images/rings.svg");
     background-position: right -26.2% bottom 25.4%;
 
+    @media (max-width: 1280px) {
+        background-position: right -330px bottom 8.2%;
+        padding-bottom: 100px;
+    }
+
     @media (max-width: 640px) {
-        background-position: right -344px bottom 12.2%;
+        padding-bottom: 80px;
+        background-position: right -344px bottom 2.7%;
     }
 
     &__skills {
