@@ -4,7 +4,7 @@
     width: 100%;
 
     @media (max-width: 1280px) {
-        background: linear-gradient(to right, transparent 58.3%, colors.$dark-gray 58.3%);
+        background: linear-gradient(to right, transparent 54%, colors.$dark-gray 54%);
     }
 
     @media (max-width: 520px) {
@@ -20,7 +20,7 @@
 
         @media (max-width: 1280px) {
             padding: 30px 0px 20px 0;
-            background: linear-gradient(to right, transparent 58.3%, colors.$dark-gray 58.3%);
+            background: linear-gradient(to right, transparent 54%, colors.$dark-gray 54%);
         }
 
         @media (max-width: 520px) {

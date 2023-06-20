@@ -8,7 +8,7 @@
 
     @media (max-width: 1280px) {
         background-image: url("/images/rings.svg"),
-            linear-gradient(to right, transparent 58.3%, colors.$dark-gray 58.3%);
+            linear-gradient(to right, transparent 54%, colors.$dark-gray 54%);
         background-position: -267px 1%, 0 0;
         margin-bottom: 70px;
     }
@@ -26,8 +26,13 @@
 
         @media (max-width: 1280px) {
             padding-top: 45px;
-            grid-template-columns: 58.3% 4.38% 37.32%;
-            background: linear-gradient(to right, transparent 58.3%, colors.$dark-gray 58.3%);
+            grid-template-columns: 54% 8% 38%;
+            background: linear-gradient(to right, transparent 54%, colors.$dark-gray 54%);
+        }
+
+        @media (max-width: 744px) {
+            padding-top: 45px;
+            grid-template-columns: 54% 13% 33%;
         }
 
         @media (max-width: 520px) {
@@ -60,6 +65,14 @@
         position: relative;
         max-height: 720px;
 
+        @media (max-width: 1280px) {
+            max-height: 553px;
+        }
+
+        @media (max-width: 744px) {
+            max-height: 312px;
+        }
+
         @media (max-width: 520px) {
             grid-area: 1 / 1 / 2 / 2;
             background-repeat: no-repeat;
@@ -73,10 +86,10 @@
             width: 100%;
             object-fit: cover;
             object-position: top;
+            aspect-ratio: 0.72/1;
 
             @media (max-width: 520px) {
                 width: 51%;
-                aspect-ratio: 0.72/1;
                 margin: 0 auto;
             }
         }
