@@ -3,11 +3,32 @@
 .header {
     width: 100%;
 
+    @media (max-width: 1280px) {
+        background: linear-gradient(to right, transparent 58.3%, colors.$dark-gray 58.3%);
+    }
+
+    @media (max-width: 520px) {
+        background: none;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 40px 30px 40px 0;
         background: linear-gradient(to right, transparent 60%, colors.$dark-gray 60%);
+
+        @media (max-width: 1280px) {
+            padding: 30px 0px 20px 0;
+            background: linear-gradient(to right, transparent 58.3%, colors.$dark-gray 58.3%);
+        }
+
+        @media (max-width: 520px) {
+            background: unset;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 20px 0px 32px;
+        }
     }
 }
