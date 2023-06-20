@@ -6,13 +6,37 @@
     background-image: url("/images/rings.svg");
     background-position: right -26.2% bottom 25.4%;
 
+    @media (max-width: 640px) {
+        background-position: right -344px bottom 12.2%;
+    }
+
     &__skills {
         border-top: 1px solid white;
         padding: 72px 5px 0 5px;
+
         display: grid;
         grid-template-columns: repeat(3, 31%);
         justify-content: space-between;
         row-gap: 58px;
+
+        @media (max-width: 1280px) {
+            padding: 52px 0 0;
+            grid-template-columns: repeat(3, 32%);
+            row-gap: 52px;
+        }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 49%);
+            row-gap: 52px;
+        }
+
+        @media (max-width: 640px) {
+            padding-top: 40px;
+            grid-template-columns: 1fr;
+            row-gap: 24px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid white;
+        }
     }
 
     &__skill-title {
@@ -21,9 +45,20 @@
         line-height: 1.167;
         letter-spacing: -0.0313em;
         margin-bottom: 14px;
+
+        @media (max-width: 640px) {
+            font-size: 32px;
+            line-height: 1.25;
+            text-align: center;
+            margin-bottom: 1px;
+        }
     }
 
     &__skill-description {
         color: colors.$light-gray;
+
+        @media (max-width: 640px) {
+            text-align: center;
+        }
     }
 }
