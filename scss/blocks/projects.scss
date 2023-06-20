@@ -3,21 +3,55 @@
 .projects {
     margin-bottom: 140px;
 
+    @media (max-width: 1280px) {
+        margin-bottom: 100px;
+    }
+
+    @media (max-width: 664px) {
+        margin-bottom: 80px;
+    }
+
     &__title-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 80px;
+
+        @media (max-width: 1280px) {
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 664px) {
+            margin-bottom: 40px;
+        }
     }
 
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 69px 2.7%;
+
+        @media (max-width: 1280px) {
+            gap: 60px 3.4%;
+        }
+
+        @media (max-width: 664px) {
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:hover img {
+            @media (min-width: 1281px) {
+                transform: scale(1.03);
+            }
+        }
     }
 
     &__item-preview {
-        position: relative;
         margin-bottom: 20px;
         aspect-ratio: 1.35 / 1;
         overflow: hidden;
@@ -30,32 +64,39 @@
         }
     }
 
-    &__item-preview:hover > &__item-links {
-        opacity: 1;
-    }
-
-    &__item-preview:hover > img {
-        transform: scale(1.03);
+    &__item:hover &__item-links {
+        @media (min-width: 1281px) {
+            opacity: 1;
+        }
     }
 
     &__item-links {
-        opacity: 0;
-
         position: absolute;
         top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
+        aspect-ratio: 1.35 / 1;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 48px;
+        opacity: 0;
+        transition: 0.3s;
 
         background-color: colors.$black-voile;
 
-        transition: 0.3s;
+        @media (max-width: 1280px) {
+            position: static;
+            aspect-ratio: unset;
+            padding-top: 20px;
+
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+
+            opacity: 1;
+        }
     }
 
     &__item-title {
@@ -71,5 +112,8 @@
         gap: 18px;
         color: colors.$light-gray;
         text-transform: uppercase;
+        @media (max-width: 664px) {
+            font-size: 18px;
+        }
     }
 }
