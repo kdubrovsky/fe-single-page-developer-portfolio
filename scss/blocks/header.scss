@@ -1,7 +1,6 @@
 @use "../colors";
 
 .header {
-    width: 100%;
 
     @media (max-width: 1280px) {
         background: linear-gradient(to right, transparent 54%, colors.$dark-gray 54%);
