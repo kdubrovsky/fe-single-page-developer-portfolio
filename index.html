@@ -246,14 +246,23 @@
                             in&nbsp;the form, and I&rsquo;ll get back to&nbsp;you as&nbsp;soon as&nbsp;possible.
                         </p>
                     </div>
-                    <form class="contact__form">
-                        <label for="name" class="visually-hidden">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Name">
-                        <label for="mail" class="visually-hidden">Email</label>
-                        <input type="email" name="mail" id="mail" placeholder="Email">
-                        <label for="message" class="visually-hidden">Message</label>
-                        <textarea name="message" id="message" cols="20" rows="3" placeholder="Message"
-                            autocomplete="off"></textarea>
+                    <form class="contact__form" novalidate>
+                        <div class="contact__form-element">
+                            <label for="name" class="visually-hidden">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Name" autocomplete="name" required>
+                            <p class="error-message">Sorry, invalid format here</p>
+                        </div>
+                        <div class="contact__form-element">
+                            <label for="mail" class="visually-hidden">Email</label>
+                            <input type="email" name="mail" id="mail" placeholder="Email" required>
+                            <p class="error-message">Sorry, invalid format here</p>
+                        </div>
+                        <div class="contact__form-element">
+                            <label for="message" class="visually-hidden">Message</label>
+                            <textarea name="message" id="message" cols="20" rows="3" placeholder="Message"
+                                autocomplete="off" required></textarea>
+                            <p class="error-message">Sorry, invalid format here</p>
+                        </div>
                         <button class="btn btn--button" type="submit">Send message</button>
                     </form>
                 </div>
@@ -290,6 +299,7 @@
         </div>
 
     </footer>
+    <script src="validation.js" type="module"></script>
 </body>
 
 </html>

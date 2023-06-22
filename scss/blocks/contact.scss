@@ -74,9 +74,14 @@
         }
     }
 
+    &__form-element {
+        position: relative;
+    }
+
     input,
     textarea {
         padding-left: 24px;
+        width: 100%;
 
         outline: none;
         font-size: 16px;
@@ -107,5 +112,28 @@
 
     button {
         align-self: flex-end;
+    }
+
+    .error-message {
+        display: none;
+
+        position: absolute;
+        bottom: -22px;
+        right: 0;
+
+        color: colors.$error;
+        font-size: 12px;
+        line-height: 1.333;
+        letter-spacing: -0.01417em;
+        text-align: right;
+
+        &::selection {
+            background-color: colors.$error;
+            color: colors.$white;
+        }
+    }
+
+    .error {
+        border-color: colors.$error;
     }
 }
