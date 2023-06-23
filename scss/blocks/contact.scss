@@ -10,11 +10,13 @@
     background-position: left -22.5% bottom 12.5%;
 
     @media (max-width: 1024px) {
+        background-position: left -367px bottom 4.8%;
         padding-top: 60px;
     }
 
     @media (max-width: 664px) {
         padding-bottom: 87px;
+        background-position: left -343px bottom 18%;
     }
 
     .section-title {
