@@ -56,7 +56,19 @@ const formHandler = function (e) {
             } else setValid(id);
         }
     );
-    if (isFormValid) console.log('Form submitted!');
+    if (isFormValid) {
+
+        let result = document.createElement('div');
+        result.classList.add('contact__success-result');
+        result.innerHTML =
+            `<h3 class="contact__success-header">
+                Done!
+            </h3>
+            <p class="contact__success-message">
+                Seems like I'll recieve a message from you
+            </p>`;
+        form.replaceWith(result);
+    }
     else console.log('Form is NOT submitted!')
 }
 
@@ -69,4 +81,5 @@ for (let id in fields) {
     fields[id].input.addEventListener('input', inputHandler);
 }
 
-document.getElementById(formId).addEventListener('submit', formHandler);
+const form = document.getElementById(formId);
+form.addEventListener('submit', formHandler);
