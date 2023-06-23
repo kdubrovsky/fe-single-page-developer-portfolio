@@ -4,6 +4,9 @@ This is a solution to the [Single-page developer portfolio challenge on Frontend
 
 [Live Site URL](https://fe-single-page-developer-portfolio.vercel.app)
 
+### Achievements
+I have created configurable vanilla JavaScript form validation.
+
 ### Built with
 
 - Semantic HTML5 markup
