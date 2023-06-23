@@ -81,6 +81,9 @@
     input,
     textarea {
         padding-left: 24px;
+        padding-right: 40px;
+        text-overflow: ellipsis;
+
         width: 100%;
 
         outline: none;
@@ -135,5 +138,10 @@
 
     .error {
         border-color: colors.$error;
+        &:not(:focus) {
+            background-image: url("/images/error.svg");
+            background-repeat: no-repeat;
+            background-position: right bottom 16px;
+        }
     }
 }
