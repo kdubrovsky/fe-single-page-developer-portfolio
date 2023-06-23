@@ -1,62 +1,72 @@
-import { form, fields } from './config'
+import { formId, fields } from './config';
+import { check } from './check';
 
-const setValid = function (field) {
-    field.classList.remove('error');
-    field.nextElementSibling.style.display = 'none';
+// -----------------------------------------------------------------
+
+const setValid = function (id) {
+    fields[id].input.classList.remove('error');
+    fields[id].message.style.display = 'none';
 }
 
-const checkValidity = function (field) {
+const setInvalid = function (id, message) {
+    fields[id].input.classList.add('error');
+    fields[id].message.textContent = message;
+    fields[id].message.style.display = 'block';
+}
 
-    for (let rule of fields[field.id].rules) {
-        if (!rule.check(field)) return rule.errorText
-    }
+const checkValidity = function (id) {
+
+    const input = fields[id].input;
+    const value = input.value;
+
+    if (input.required && !check.isNotEmpty(value))
+        return fields[id].errors.required;
+
+    if (input.type === 'email' && !check.isMail(value))
+        return fields[id].errors.mail;
+
     return false;
 }
 
-const showError = function (field, message) {
-    field.classList.add('error');
-    field.nextElementSibling.textContent = message;
-    field.nextElementSibling.style.display = 'block';
-}
-
-
-// handlers
+// -----------------------------------------------------------------
 
 const blurHandler = function (e) {
-    const field = e.target;
-    const error = checkValidity(field);
+    const id = e.target.id;
+    const error = checkValidity(id);
 
-    if (error) showError(field, error); else setValid(field);
+    if (error)
+        setInvalid(id, error);
+    else
+        setValid(id);
 }
 
 const inputHandler = function (e) {
-    setValid(e.target);
+    setValid(e.target.id);
 }
 
 const formHandler = function (e) {
     e.preventDefault();
     let isFormValid = true;
-    Object.values(fields).forEach(
+    Object.keys(fields).forEach(
         id => {
-            const field = id.element;
-            const error = checkValidity(field);
+            const error = checkValidity(id);
             if (error) {
-                showError(field, error);
+                setInvalid(id, error);
                 isFormValid = false;
-            } else setValid(field);
+            } else setValid(id);
         }
     );
-    if (isFormValid)
-        console.log('Form submitted!');
-    else
-        console.log('Form is NOT submitted!')
+    if (isFormValid) console.log('Form submitted!');
+    else console.log('Form is NOT submitted!')
 }
 
+// -----------------------------------------------------------------
 
 for (let id in fields) {
-    fields[id].element = document.getElementById(id);
-    fields[id].element.addEventListener('blur', blurHandler);
-    fields[id].element.addEventListener('input', inputHandler);
+    fields[id].input = document.getElementById(id);
+    fields[id].message = fields[id].input.nextElementSibling;
+    fields[id].input.addEventListener('blur', blurHandler);
+    fields[id].input.addEventListener('input', inputHandler);
 }
 
-form.addEventListener('submit', formHandler);
+document.getElementById(formId).addEventListener('submit', formHandler);
